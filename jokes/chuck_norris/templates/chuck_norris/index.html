@@ -1,10 +1,13 @@
  <h1>Jokes</h1>
  <br/>
- <ul>
-   <p> hello </p>
-   <!--
-    {% for a in author_list %}
-        <li><a href="/quotes/{{ a }}/">{{ a }}</a></li>
-    {% endfor %}
-  -->
-</ul>
+
+<form action="add/" method="post">
+
+ {% csrf_token %}
+    <input type="text" name="voornaam" id="voornaam"  value="" />
+    <label for="voornaam">Voornaam</label><br />
+    <input type="text" name="achternaam" id="voornaam"  value="" />
+    <label for="achternaam">achternaam</label><br />
+
+<input type="submit" value="Submit" />
+</form>
